@@ -60,7 +60,7 @@ div.banner div.banner_text h3 {
 div.slogan {
   /* border: 1px solid blue; */
   display: block;
-  background-image: url(/image/banner.jpg);
+  background-image: url(../../image/banner.jpg);
   background-size: cover;
   width: 1000px;
   height: 540px;
