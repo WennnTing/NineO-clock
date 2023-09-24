@@ -1,0 +1,373 @@
+/*--------banner--------*/
+
+div.banner {
+  /* border: 1px solid red; */
+  display: inline-block;
+  font-size: 0;
+  width: 100%;
+  height: 800px;
+  background-image: url(/image/banner3.jpg);
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  background-position: center center;
+  max-width: 1900px;
+
+}
+
+div.banner div.banner_text {
+  color: aliceblue;
+  /* border: 1px solid white; */
+  font-size: 160px;
+  font-family: 'Caveat', cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+div.banner div.banner_text h1 {
+  /* position: absolute; */
+  display: inline;
+  /* margin: 0 0 0 0; */
+  padding-right: 30px;
+  padding-left: 160px;
+
+
+}
+
+div.banner div.banner_text h2 {
+  /* position: absolute; */
+  display: inline;
+  padding-left: 50px;
+  margin-left: 50px;
+
+}
+
+div.banner div.banner_text h3 {
+  /* position: absolute; */
+  font-size: 80px;
+  bottom: 35%;
+  left: 3%;
+}
+
+
+
+/*--------slogan--------*/
+
+div.slogan {
+  /* border: 1px solid blue; */
+  display: block;
+  background-image: url(/image/banner.jpg);
+  background-size: cover;
+  width: 1000px;
+  height: 540px;
+  margin: 100px auto;
+  position: relative;
+}
+
+
+div.slogan .slogan_text {
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+}
+
+div.slogan .slogan_text>h1 {
+  position: absolute;
+  font-size: 32px;
+  top: 75%;
+  left: 10%;
+}
+
+div.slogan .slogan_text>h2 {
+  position: absolute;
+  font-size: 32px;
+  top: 85%;
+  left: 28%;
+}
+
+
+
+/*--------news card--------*/
+main {
+  /* border: 1px solid yellow; */
+  /* display: flex; */
+  /* justify-content: space-between;*/
+
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 200px;
+  min-width: 1400px;
+
+}
+
+figure.news_card {
+  border: 2px solid rgba(236, 236, 236, 0.5);
+  /* width: 24%; */
+  overflow: hidden;
+
+  /*用來定位日期*/
+  position: relative;
+
+}
+
+/*圖片設定opcity讓他先透明*/
+figure.news_card img {
+  width: 100%;
+  vertical-align: top;
+  opacity: 0.8;
+}
+
+/*滑鼠碰到圖片的時候圖片會變清晰*/
+figure.news_card img:hover {
+  opacity: 1.0;
+}
+
+figure.news_card div.date {
+  /* border: 1px solid yellow; */
+  background-color: #1e1e1e;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  text-align: right;
+}
+
+figure.news_card div.date span {
+  border: 1px solid #1e1e1e;
+  display: inline-block;
+  height: 5px;
+  width: 100%;
+}
+
+figure.news_card div.date p {
+  /* border: 1px solid white; */
+  position: absolute;
+  width: 100px;
+  right: 5%;
+  font-size: 16px;
+}
+
+/*製作斜切三角形*/
+figure.news_card div.date::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0%;
+  height: 0;
+  border-style: solid;
+  border-width: 0 400px 80px 0;
+  border-color: transparent #1e1e1e transparent transparent;
+
+}
+
+figure.news_card figcaption {
+  color: white;
+  background-color: #1e1e1e;
+  position: relative;
+  height: 100%;
+}
+
+figure.news_card figcaption::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 42px 0 0 305px;
+  border-color: transparent transparent transparent #1e1e1e;
+}
+
+/*標題*/
+figure.news_card figcaption>h1 {
+  /* border: 1px solid palevioletred; */
+  /* position: absolute; */
+  left: 0;
+  bottom: 30%;
+  width: 100%;
+  text-align: center;
+  background-color: #1e1e1e;
+  font-size: 24px;
+  /* margin: 0 0 0 10px;  */
+}
+
+/*內文 - 設定成最多兩行，超過就會變 ...*/
+figure.news_card figcaption>p {
+  margin: 10px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 20px;
+  /* white-space: nowrap;
+  text-overflow: ellipsis;*/
+  overflow: hidden;
+}
+
+figure.news_card figcaption span.read_more {
+  display: inline-block;
+
+  /* border: 1px solid yellow; */
+}
+
+/*按鈕 - 查看更多*/
+figure.news_card figcaption span.read_more a {
+  /* border:1px solid greenyellow; */
+  display: inline-block;
+  border: 1px solid #ffffff;
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  padding: 8px;
+  text-align: center;
+  font-weight: 600;
+  opacity: 0.65;
+}
+
+figure.news_card figcaption span.read_more a:hover {
+  opacity: 1.0;
+}
+
+/*-------- card animation --------*/
+
+/* down */
+.one {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+
+.two {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+}
+
+/* up */
+.fadeUp {
+  -webkit-animation-name: fadeUp;
+  animation-name: fadeUp;
+
+}
+
+
+
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* ------ */
+.fadeDown {
+  -webkit-animation-name: fadeDown;
+  animation-name: fadeDown;
+}
+
+@-webkit-keyframes fadeDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/*-------- loading --------*/
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  transition: opacity 2s, visibility 8s;
+  z-index: 5;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid black;
+  border-top-color: white;
+  border-radius: 50%;
+  animation: loading 0.9s ease infinite;
+  z-index: 4;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0turn);
+  }
+
+  100% {
+    transform: rotate(1turn);
+  }
+}

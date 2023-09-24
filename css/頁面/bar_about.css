@@ -1,0 +1,83 @@
+.about_card {
+    /* border: 2px solid purple; */
+    width: 60%;
+    position: relative;
+    min-width: 600px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+/*----正面卡片----*/
+
+.front_daddy {
+    position: absolute;
+
+}
+
+.front {
+    border: 8px solid white;
+    position: relative;
+    backface-visibility: hidden;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+
+}
+
+.front_pic img {
+    width: 100%;
+}
+
+.front_txt {
+    /* border: 1px solid blue; */
+    background-color: rgba(255, 255, 255, 0.15);
+    /* height: 10vh; */
+    position: absolute;
+    left: 0;
+    top: 73%;
+    width: 100%;
+    font-size: 96px;
+    font-family: 'Caveat', cursive;
+    color: white;
+    text-align: center;
+    text-wrap: nowrap;
+}
+
+/*----背面卡片----*/
+.back {
+    border: 8px solid rgb(187, 187, 187);
+    position: relative;
+    backface-visibility: hidden;
+    transition: 1.5s;
+    transform-style: preserve-3d;
+    transform: rotateY(-180deg);
+
+}
+
+.back_pic img {
+    width: 100%;
+}
+
+.back_txt {
+    /* border: 1px solid blue; */
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 28px;
+    margin: 20px;
+    color: white;
+
+}
+
+/*--翻轉卡片--*/
+.about_card:hover .back {
+    transform: rotateY(0deg);
+}
+
+.about_card:hover .front {
+    transform: rotateY(180deg);
+}

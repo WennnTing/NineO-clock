@@ -1,0 +1,130 @@
+header.header{
+    /* border: 1px solid black; */
+    background: linear-gradient(to bottom, #efefef, lightgray);
+
+    /*給黑框一個限制就是不可以比600小，縮小到500時還是依樣會是600*/
+    min-width: 600px;
+
+}
+
+
+header.header div.block{
+    /* border: 1px solid red; */
+    width: 600px;
+    margin: 0 auto;
+}
+
+header.header div.block nav.nav{
+    /* border: 1px solid green; */
+    font-size: 0;
+}
+
+
+/*處理社群連結超出原本匡線，讓他跟最外層div一樣高度*/
+header.header div.block nav.nav::after{
+    content: "";
+    display: block;
+    clear: both;
+
+}
+
+
+
+header.header a.logo,
+header.header ul.nav_list,
+header.header div.share_block{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+}
+/*================== logo ==================*/
+
+header.header a.logo{
+    /* border: 1px solid black; */
+    font-size: 0;
+
+}
+
+header.header a.logo img{
+    height: 60px;
+}
+
+/*================== 導覽列 ==================*/
+header.header ul.nav_list{
+    /* border: 1px solid red; */
+    list-style: none;
+    margin: 0 0 0 20px;
+    padding:0;
+    font-size: 0;
+
+}
+
+header.header ul.nav_list > li{
+    /* border: 1px solid blue; */
+    display: inline-block;
+    font-size: 16px;
+    
+}
+
+header.header ul.nav_list > li a{
+    display: inline-block;
+    /* border: 1px solid rgb(195, 115, 29); */
+    text-decoration: none;
+    height: 60px;
+    padding: 0 10px;
+    color: gray;
+    /*行高設定*/
+    line-height: 60px;
+
+}
+
+header.header ul.nav_list > li a.-on,
+header.header ul.nav_list > li a:hover{
+    background: linear-gradient(to bottom, #efefef 2%, gray 98%);
+    color: white;
+}
+
+/*================== 選單 ==================*/
+header.header div.share_block{
+    /* border: 2px solid blue; */
+    /* display: none; */
+    float: right;
+
+    /*為了保留給紫匡做絕對定位用的（line 102）*/
+    position: relative;
+}
+
+header.header div.share_block:hover ul.share_list{
+    display: block;
+}
+
+header.header div.share_block span.share_text{
+    /* border: 1px solid black; */
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 10px;
+    background-color: yellowgreen;
+    color: blue;
+}
+
+header.header div.share_block ul.share_list{
+    /* border: 1px solid purple; */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    width: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+
+header.header div.share_block ul.share_list > li a{
+    text-decoration: none;
+    background-color: #ccc;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+}

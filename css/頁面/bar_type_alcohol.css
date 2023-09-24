@@ -1,0 +1,99 @@
+/*------------------- 菜單內容-------------------*/
+
+.menu_daddy {
+    margin: 100px;
+    background-color: rgba(255, 255, 255, 0.705);
+    border-radius: 10px 100px 10px 100px;
+    border: 5px solid rgb(227, 229, 162);
+    overflow: hidden;
+}
+
+.menu .menu_title {
+    /* border: 1px solid red; */
+    /* background-color: rgba(255, 255, 255, 0.705); */
+    /* transform: translateX(50%); */
+    padding: 0 20px 20px 20px;
+    margin: 0px auto;
+    /* border-radius: 10px 100px 10px 100px; */
+    overflow: hidden;
+    /* font-family: 'caveat', bold; */
+    max-width: 960px;
+
+
+
+}
+
+.menu_title:nth-child(2n) h3,
+.menu_title:nth-child(2n) h4 {
+    text-align: right;
+
+}
+
+
+
+.menu .menu_title h2 {
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    padding: 8px 0 16px 0;
+    /* font-family: 'caveat', bold; */
+}
+
+.menu .menu_title h2 {
+    /* border: 5px solid black; */
+}
+
+.menu .menu_title .items {
+    /* border: 1px solid yellow; */
+    display: flex;
+
+}
+
+.menu_pic {
+    /* border: 1px solid pink; */
+    width: 300px;
+    height: 300px;
+}
+
+.menu .menu_title .items .menu_pic img {
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0 30px;
+}
+
+.menu .menu_title .drink_title {
+    /* border: 1px solid purple; */
+    padding: 0 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    width: calc(100% - 300px)
+}
+
+.menu .menu_title .items h3 {
+    /* border: 1px solid black; */
+    font-size: 40px;
+    /* padding: 10px; */
+    margin-bottom: 20px;
+    font-family: 'caveat', bold;
+    /* text-align: center; */
+
+}
+
+.menu .menu_title .items h4 {
+    /* border: 1px solid yellow; */
+    margin-bottom: 12px;
+    font-family: 'caveat', bold;
+    /* font-family: 'Permanent Marker', cursive; */
+    font-size: 28px;
+    /* text-align: center; */
+}
+
+.menu .menu_title .items p {
+    /* border: 1px solid blue; */
+    /* padding: 20px; */
+    line-height: 30px;
+}

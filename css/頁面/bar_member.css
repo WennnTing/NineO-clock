@@ -1,0 +1,100 @@
+/* --------------------- member --------------------- */
+.login-div {
+    width: 100%;
+    min-width: 1400px;
+}
+
+
+.login_page {
+
+    width: 80%;
+    /* border: 1px solid white; */
+    display: flex;
+
+
+
+    margin: 20px auto;
+}
+
+.login_pic img {
+    width: 100%;
+}
+
+.login_pic {
+    width: 40%;
+}
+
+.login {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* border: 1px solid yellow; */
+    width: 60%;
+    padding-left: 10px;
+    font-family: 'Caveat', cursive;
+    color: white;
+
+}
+
+.login h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 60px;
+    border-bottom: 1px solid white;
+    padding: 8px;
+}
+
+.login_daddy {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.login .label_Account {
+    width: 500px;
+    display: inline-block;
+    /* border: 1px solid red; */
+    margin: 20px 10px;
+    font-size: 32px;
+}
+
+.login input.myAccount_1 {
+    display: inline-block;
+    width: 300px;
+    border: 2px solid yellow;
+    width: 120px;
+    margin-left: 8px;
+}
+
+input.myAccount_1[type="text"] {
+    width: 70%;
+    height: 30px;
+    outline: none;
+    border: 3px solid #ccc;
+    transition: .7s;
+    padding: 20px 20px;
+
+}
+
+input.myAccount_1:focus {
+    border: 3px solid #000
+}
+
+.btn {
+    /* border: 5px solid green; */
+    width: 250px;
+    height: 30px;
+    margin: 30px auto;
+    padding: 3px;
+    font-family: 'Caveat', cursive;
+    background-color: rgb(200, 200, 200);
+    color: white;
+}
+
+.btn:hover {
+    opacity: .85;
+    cursor: pointer;
+}
