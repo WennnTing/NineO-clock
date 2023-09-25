@@ -236,7 +236,7 @@ figure.news_card figcaption span.read_more a:hover {
   opacity: 1.0;
 }
 
-/*-------- card animation --------*/
+/* -------- card animation --------
 
 /* down */
 .one {
@@ -253,40 +253,21 @@ figure.news_card figcaption span.read_more a:hover {
 }
 
 .animate {
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
   animation-fill-mode: both;
-  -webkit-animation-fill-mode: both;
 }
 
 /* up */
 .fadeUp {
-  -webkit-animation-name: fadeUp;
   animation-name: fadeUp;
 
 }
 
 
-
-@-webkit-keyframes fadeUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
 @keyframes fadeUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 50%, 0);
   }
 
   100% {
@@ -298,22 +279,7 @@ figure.news_card figcaption span.read_more a:hover {
 
 /* ------ */
 .fadeDown {
-  -webkit-animation-name: fadeDown;
   animation-name: fadeDown;
-}
-
-@-webkit-keyframes fadeDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
 }
 
 @keyframes fadeDown {
